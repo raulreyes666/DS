@@ -1,11 +1,13 @@
 //
-// ES5
+//finally
 //
-// with next QM
-// zeeAlso Node4stu6es
 
-
-function Node(data) {//constructor
-   this.data = data
-   this.next = null
+const traverse=(n)=>{//es6
+    let c=n//iterator 
+    while(c){//exists
+      console.log(c.data)
+    	c=c.next
+    }
 }
+
+traverse(n1)
