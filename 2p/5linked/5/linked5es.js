@@ -12,7 +12,7 @@ function Linked(n) {//node
     this.prepend = prepend
     this.append = append
     this.traverse = traverse
-    //this.contains = contains
+     this.contains = contains
 }
 
 function getHead(){return this.head}
