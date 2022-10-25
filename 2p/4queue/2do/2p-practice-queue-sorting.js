@@ -6,11 +6,7 @@
  * may use code from previous exercises
  *
  * PROBLEM 1
- * Using a array-based stack implementation
- * method search
+ * Using a array-based implementation
+ * queue-sorting
  *
  */
-
-//hola
-
-//last test
