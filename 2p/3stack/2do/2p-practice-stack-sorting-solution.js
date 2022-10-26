@@ -6,24 +6,24 @@ var pasos = 0;
 console.time('Tiempo total')
 	
 	function stackSorting(x){
-		let tmpStack = [];
+		let stack = [];
 		while (x.length > 0)
 		{
 		
 			let xPoped = x.pop();
 
 		
-			while (tmpStack.length > 0 && tmpStack[tmpStack.length - 1] > xPoped)
+			while (stack.length > 0 && stack[stack.length - 1] > xPoped)
 			{
 			
-				x.push(tmpStack[tmpStack.length - 1]);
-				tmpStack.pop()
+				x.push(stack[stack.length -1]);
+				stack.pop()
 			}
 
 			
-			tmpStack.push(xPoped);
+			stack.push(xPoped);
 		}
-		return tmpStack;
+		return stack;
 	}
 
 	let x = [];
@@ -36,12 +36,12 @@ let random;
 let numeros = [];
 numeros.push(x);
   
-	let tmpStack = stackSorting(x);
+	let stack = stackSorting(x);
 
-	while (tmpStack.length > 0)	{
+	while (stack.length > 0)	{
 		
-    console.log(tmpStack[tmpStack.length - 1] + " ");
-		tmpStack.pop();
+    console.log(stack[stack.length - 1] + " ");
+		stack.pop();
 	pasos++}
 
 

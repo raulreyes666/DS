@@ -5,59 +5,59 @@ var i = 0;
 console.time('Tiempo total')
 
 
-function min(q, sortedIndex)
+function min(z, sortedIndex)
 {
-	let minIndx = -1
+	let minNmb = -1
 	let valMin = 999999999999
-	let n = q.length
+	let n = z.length
 	for(let i = 0; i < n; i++)
 	{
-		let curr = q.shift()
+		let c = z.shift()
 	
-		if (curr <= valMin && i <= sortedIndex){
-			minIndx = i
-			valMin = curr
+		if (c <= valMin && i <= sortedIndex){
+			minNmb = i
+			valMin = c
 		}
-		q.push(curr) 
+		z.push(c) 
 	}
-	return minIndx
+	return minNmb
 }
 
 
-function insertMin(q, minIndx){
+function insertMin(z, minNmb){
 	let valMin = 0
-	let n = q.length
+	let n = z.length
 	for(let i=0;i<n;i++){
-		let curr = q.shift()
-		if (i != minIndx)
-			q.push(curr)
+		let c = z.shift()
+		if (i != minNmb)
+			z.push(c)
 		else
-			valMin = curr
+			valMin = c
 	}
-	q.push(valMin)
+	z.push(valMin)
 }
 
-function sortQueue(q){
-	for(let i=1;i<q.length+1;i++){
-		let minIndx = min(q, q.length - i)
-		insertMin(q, minIndx)
+function sortQueue(z){
+	for(let i=1;i<z.length+1;i++){
+		let minNmb = min(z, z.length - i)
+		insertMin(z, minNmb)
     pasos++
 	}
 }
 
 
-let q = [];
+let z = [];
 let random;
  for(i = 0; i < m; i++){
  random = Math.floor(Math.random() * 1000);
- q.push(random);
+ z.push(random);
  };
 
-sortQueue(q)
+sortQueue(z)
 
 
-while (q.length > 0){
-	console.log(q.shift()," ")
+while (z.length > 0){
+	console.log(z.shift()," ")
 }
 console.timeEnd('Tiempo total')
-console.log('Pasos '+pasos);
+console.log('Pasos que tomo: '+pasos);
